@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Converter - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #1d2b64, #f8cdda); /* Gradient background */
+            color: #fff; /* White text */
+            line-height: 1.6;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.6); /* Slight transparent background */
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+  .container a {
+    text-decoration: none;
+    color: #FF7E5F;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 20px;
+    display: block;
+  }
+  .container a:hover {
+    color: #FEB47B;
+  }
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #FF7E5F;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        select, textarea {
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            outline: none;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        select:focus, textarea:focus {
+            border-color: #FF7F50; /* Coral color on focus */
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 18px;
+            background-color: #FF7F50; /* Coral background */
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #FF6347; /* Lighter Coral */
+            transform: scale(1.05);
+        }
+
+        .result-container {
+            margin-top: 30px;
+            display: none;
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .result-container h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .result-container p {
+            font-size: 18px;
+            color: #FFF;
+        }
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 15px;
+            }
+
+            select, textarea {
+                max-width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Language Converter</h2>
+
+    <div class="input-group">
+        <label for="language">Choose a Language:</label>
+        <select id="language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="hi">Hindi</option>
+            <option value="ja">Japanese</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label for="textInput">Enter Text:</label>
+        <textarea id="textInput" placeholder="Type text here..."></textarea>
+    </div>
+
+    <div class="btn-container">
+        <button onclick="convertText()">Convert</button>
+
+    </div>
+
+    <div class="result-container" id="resultContainer">
+        <h3>Converted Text:</h3>
+        <p id="convertedText"></p>
+        
+    </div>
+    <a href="index.html" class="back-link">Back to Home</a>
+</div>
+
+<script>
+    function convertText() {
+        var language = document.getElementById('language').value;
+        var text = document.getElementById('textInput').value;
+
+        if (text.trim() === "") {
+            alert("Please enter some text to convert.");
+            return;
+        }
+
+        var translatedText = "";
+
+        switch (language) {
+            case 'en':
+                translatedText = text;
+                break;
+            case 'es':
+                translatedText = "Traducido: " + text;  
+                break;
+            case 'fr':
+                translatedText = "Traduit: " + text;  
+                break;
+            case 'de':
+                translatedText = "Übersetzt: " + text; 
+                break;
+            case 'it':
+                translatedText = "Tradotto: " + text; 
+                break;
+            case 'hi':
+                translatedText = "अनुवादित: " + text;  
+                break;
+            case 'ja':
+                translatedText = "翻訳された: " + text;  
+                break;
+            default:
+                translatedText = text;
+        }
+
+        document.getElementById('convertedText').innerText = translatedText;
+        document.getElementById('resultContainer').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
+
+

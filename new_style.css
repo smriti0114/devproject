@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1d2b64, #f8cdda); 
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  
+  .container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+  }
+  
+  .container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #FF7E5F; 
+  }
+  
+  .container p {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .container input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    color: #333;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    margin-bottom: 20px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .container input:focus {
+    border: 2px solid #FF7E5F;
+    box-shadow: 0 0 10px rgba(255, 126, 95, 0.7);
+  }
+  
+  .container button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(to right, #FF7E5F, #FEB47B); 
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .container button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+  
+  .container .download {
+    margin-top: 20px;
+    background: #FF9F00;
+    color: #fff;
+  }
+  
+  .container a {
+    text-decoration: none;
+    color: #FF7E5F;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 20px;
+    display: block;
+  }
+  
+  .container a:hover {
+    color: #FEB47B;
+  }
+  
+  #imgbox {
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+  }
+  
+  #imgbox img {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #imgbox.show-img {
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+  }
+  
+
+  .error {
+    animation: shake 0.3s linear 1;
+  }
+  
+  @keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+  
+    
+    

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textorr - Tools and Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }  
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6c7cb8, #aa808d, #FFD1DC);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+            color: #444;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            background-color: #182247;
+            padding: 20px 0;
+            width: 100%;
+        }
+        
+        header nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        header .logo h1 {
+            font-family: 'Playfair Display', serif;
+            color: #f5b041;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+        
+        header .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        
+        header .nav-links li {
+            margin: 0 15px;
+        }
+        
+        header .nav-links a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        
+        header .nav-links a:hover {
+            color: #f5b041;
+        }
+        
+        header .btnlogin-popup {
+            padding: 10px 20px;
+            background-color: #f5b041;
+            color: #111;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        header .btnlogin-popup:hover {
+            background-color: #e67e22;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .tool-card {
+            margin-bottom: 40px;
+        }
+
+        .tool-card h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .tool-card ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .tool-card ul li {
+            margin-bottom: 10px;
+        }
+
+        .tool-card a {
+            font-size: 18px;
+            font-weight: 600;
+            color: #182247;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .tool-card a:hover {
+            color: #f5b041;
+        }
+
+        a:hover{
+            color:#aa808d ;
+        }
+
+        footer {
+            background-color: #182247;
+            color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        .btnlogin-popup {
+            text-align: center;
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Textorr.com</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Tools</a></li>
+                <li><a href="services1.html">Services</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="index.html">Contact</a></li>
+                <li><a href="index1.html"><button class="btnlogin-popup">Login</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tool-card">
+            <a href="new_index.html">
+                <h2>1. Text to QR Code Conversion</h2>
+            </a>
+            <ul>
+                <li><b>Generate QR Codes:</b> Convert any text (URLs, messages, or contact information) into a QR code for easy sharing.</li>
+                <li><b>Customization Options:</b> Allow users to customize the appearance of the QR code (color, size, logo embedding).</li>
+                <li><b>Multiple QR Formats:</b> Offer downloadable QR codes in various formats such as PNG, JPEG, SVG, or PDF.</li>
+                <li><b>QR Code Scanning:</b> Provide a built-in feature to scan QR codes and retrieve the embedded text.</li>
+            </ul>
+        </div>
+
+        <div class="tool-card">
+            <a href="new_index1.html">
+                <h2>2. Text to Voice</h2>
+            </a>
+            <ul>
+                <li><b>Text-to-Speech Conversion:</b> Convert written text into natural-sounding speech in multiple languages.</li>
+                <li><b>Voice Selection:</b> Offer different voice options (male, female, different accents).</li>
+                <li><b>Speed and Pitch Control:</b> Allow users to adjust the speech rate and pitch for personalization.</li>
+                <li><b>Downloadable Audio:</b> Provide downloadable audio files in formats like MP3 or WAV for offline use.</li>
+                <li><b>Language Support:</b> Support a wide range of languages and accents for diverse global users.</li>
+            </ul>
+        </div>
+
+        <div class="tool-card">
+            <a href="converter.html">
+                <h2>3. Text Translation into Different Languages</h2>
+            </a>
+            <ul>
+                <li><b>Language Selection:</b> Translate text into a wide variety of languages (e.g., Spanish, French, German, Mandarin, etc.).</li>
+                <li><b>Real-Time Translation:</b> Provide real-time translation to facilitate communication between people who speak different languages.</li>
+                <li><b>Accuracy and Context:</b> Ensure that translations are contextually appropriate, possibly using AI-powered translation tools.</li>
+                <li><b>Language Detection:</b> Automatically detect the language of the input text and suggest the best target language for translation.</li>
+                <li><b>Downloadable Translations:</b> Offer users the ability to download translations as documents (PDF, DOCX, etc.).</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Textorr.com. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
